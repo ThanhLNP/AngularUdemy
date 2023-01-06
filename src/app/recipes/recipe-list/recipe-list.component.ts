@@ -15,7 +15,7 @@ export class RecipeListComponent {
       'https://us-tuna-sounds-images.voicemod.net/34e4a9df-db1b-4a42-b63c-63cc7f674ff4-1659604548424.jpg'
     ),
     new Recipe(
-      'test name',
+      'test name A',
       'test description',
       'https://us-tuna-sounds-images.voicemod.net/34e4a9df-db1b-4a42-b63c-63cc7f674ff4-1659604548424.jpg'
     ),
