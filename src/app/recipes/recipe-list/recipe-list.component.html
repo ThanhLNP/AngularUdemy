@@ -5,21 +5,12 @@
 </div>
 <hr />
 <div class="row">
-  <div class="list-group col-xs-12">
-    <a class="list-group-item clearfix" href="#" *ngFor="let recipe of recipes">
-      <div class="float-start">
-        <h4 class="list-group-item-heading">{{ recipe.name }}</h4>
-        <p class="list-group-item-text">{{ recipe.description }}</p>
-      </div>
-      <span class="float-end">
-        <img
-          [src]="recipe.imagePath"
-          alt="{{ recipe.name }}"
-          class="img-responsive"
-          style="max-height: 50px"
-        />
-      </span>
-    </a>
-    <app-recipe-item></app-recipe-item>
+  <div class="col-xs-12">
+    <app-recipe-item
+      class="list-group"
+      *ngFor="let recipe of recipes"
+      [recipe]="recipe"
+      (recipeSelected)="onRecipeSelected(recipe)"
+    ></app-recipe-item>
   </div>
 </div>
