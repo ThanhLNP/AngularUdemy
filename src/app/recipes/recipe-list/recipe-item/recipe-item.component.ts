@@ -1,5 +1,4 @@
 import { Component, Input } from '@angular/core';
-import { RecipeService } from 'src/app/services/recipe.service';
 import { Recipe } from 'src/app/shared/recipes.model';
 
 @Component({
@@ -8,11 +7,6 @@ import { Recipe } from 'src/app/shared/recipes.model';
   styleUrls: ['./recipe-item.component.scss'],
 })
 export class RecipeItemComponent {
-  constructor(private recipeService: RecipeService) {}
-
   @Input() recipe!: Recipe;
-
-  onSelected() {
-    this.recipeService.recipeSelected.emit(this.recipe);
-  }
+  @Input() index!: number;
 }

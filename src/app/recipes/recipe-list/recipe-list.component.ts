@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component } from '@angular/core';
 import { RecipeService } from 'src/app/services/recipe.service';
 import { Recipe } from 'src/app/shared/recipes.model';
 
@@ -11,4 +11,6 @@ export class RecipeListComponent {
   constructor(private recipeService: RecipeService) {}
 
   recipes: Recipe[] = this.recipeService.getRecipes();
+
+  onCreateRecipe() {}
 }
