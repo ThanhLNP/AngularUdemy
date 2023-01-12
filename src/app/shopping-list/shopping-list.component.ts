@@ -7,7 +7,6 @@ import { Ingredient } from '../shared/ingredient.model';
   selector: 'app-shopping-list',
   templateUrl: './shopping-list.component.html',
   styleUrls: ['./shopping-list.component.scss'],
-  providers: [ShoppingListService],
 })
 export class ShoppingListComponent implements OnInit, OnDestroy {
   subscriptions!: Subscription;
