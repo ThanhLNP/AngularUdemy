@@ -9,7 +9,7 @@ import { ShoppingListComponent } from '../component/shopping-list/shopping-list.
 import { RecipesResolverService } from '../shared/services/recipes-resolver.service';
 
 const appRoutes: Routes = [
-  { path: '', redirectTo: '/auth', pathMatch: 'full' },
+  { path: '', redirectTo: '/recipes', pathMatch: 'full' },
   {
     path: 'recipes',
     component: RecipesComponent,
