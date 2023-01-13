@@ -4,22 +4,22 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { RecipesComponent } from './recipes/recipes.component';
-import { RecipeListComponent } from './recipes/recipe-list/recipe-list.component';
-import { RecipeDetailComponent } from './recipes/recipe-detail/recipe-detail.component';
-import { RecipeItemComponent } from './recipes/recipe-list/recipe-item/recipe-item.component';
-import { ShoppingListComponent } from './shopping-list/shopping-list.component';
-import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
+import { HeaderComponent } from './component/header/header.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './route/app-routing.module';
-import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.component';
-import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
 import { RecipeService } from './services/recipe.service';
 import { ShoppingListService } from './services/shopping-list.service';
-import { AuthComponent } from './auth/auth.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AuthInterceptorService } from './shared/services/auth-interceptor.service';
+import { RecipesComponent } from './component/recipes/recipes.component';
+import { RecipeListComponent } from './component/recipes/recipe-list/recipe-list.component';
+import { RecipeDetailComponent } from './component/recipes/recipe-detail/recipe-detail.component';
+import { RecipeItemComponent } from './component/recipes/recipe-list/recipe-item/recipe-item.component';
+import { ShoppingListComponent } from './component/shopping-list/shopping-list.component';
+import { ShoppingEditComponent } from './component/shopping-list/shopping-edit/shopping-edit.component';
+import { RecipeStartComponent } from './component/recipes/recipe-start/recipe-start.component';
+import { RecipeEditComponent } from './component/recipes/recipe-edit/recipe-edit.component';
+import { AuthComponent } from './component/auth/auth.component';
 
 @NgModule({
   declarations: [
