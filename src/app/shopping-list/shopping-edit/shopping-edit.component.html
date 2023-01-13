@@ -11,7 +11,11 @@
             name="name"
             ngModel
             required
+            #name="ngModel"
           />
+          <span class="help-block" *ngIf="!name.valid && name.touched">
+            Please enter ingredient name!
+          </span>
         </div>
         <div class="col-sm-2 form-group">
           <label for="amount">Amount</label>
@@ -23,7 +27,11 @@
             ngModel
             required
             [pattern]="'^[1-9]+[0-9]*$'"
+            #amount="ngModel"
           />
+          <span class="help-block" *ngIf="!amount.valid && amount.touched">
+            Please enter valid ingredient amount!
+          </span>
         </div>
       </div>
 

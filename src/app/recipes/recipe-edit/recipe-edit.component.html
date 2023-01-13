@@ -26,6 +26,15 @@
               id="name"
               formControlName="name"
             />
+            <span
+              class="help-block"
+              *ngIf="
+                !recipeForm.get('name')?.valid &&
+                recipeForm.get('name')?.touched
+              "
+            >
+              Please enter name!
+            </span>
           </div>
         </div>
       </div>
@@ -41,6 +50,15 @@
               formControlName="imagePath"
               #imagePath
             />
+            <span
+              class="help-block"
+              *ngIf="
+                !recipeForm.get('imagePath')?.valid &&
+                recipeForm.get('imagePath')?.touched
+              "
+            >
+              Please enter image path!
+            </span>
           </div>
         </div>
       </div>
@@ -62,6 +80,15 @@
               rows="6"
               formControlName="description"
             ></textarea>
+            <span
+              class="help-block"
+              *ngIf="
+                !recipeForm.get('description')?.valid &&
+                recipeForm.get('description')?.touched
+              "
+            >
+              Please enter description!
+            </span>
           </div>
         </div>
       </div>
@@ -75,6 +102,15 @@
           >
             <div class="col-xl-8">
               <input type="text" class="form-control" formControlName="name" />
+              <span
+                class="help-block"
+                *ngIf="
+                  !ingredientCtrl.get('name')?.valid &&
+                  ingredientCtrl.get('name')?.touched
+                "
+              >
+                Please enter ingredient name!
+              </span>
             </div>
 
             <div class="col-xl-2">
@@ -83,6 +119,15 @@
                 class="form-control"
                 formControlName="amount"
               />
+              <span
+                class="help-block"
+                *ngIf="
+                  !ingredientCtrl.get('amount')?.valid &&
+                  ingredientCtrl.get('amount')?.touched
+                "
+              >
+                Please enter amount!
+              </span>
             </div>
 
             <div class="col-xl-2">
