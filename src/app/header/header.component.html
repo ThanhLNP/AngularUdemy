@@ -19,7 +19,11 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" routerLinkActive="active" routerLink="recipes"
+          <a
+            class="nav-link"
+            routerLinkActive="active"
+            routerLink="recipes"
+            *ngIf="isAuthenticated"
             >Recipes</a
           >
         </li>
@@ -31,9 +35,29 @@
             >Shopping List</a
           >
         </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLinkActive="active"
+            routerLink="auth"
+            *ngIf="!isAuthenticated"
+            >Authenticate</a
+          >
+        </li>
       </ul>
 
       <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLinkActive="active"
+            routerLink="logout"
+            *ngIf="isAuthenticated"
+            (click)="onLogOut()"
+            >Logout</a
+          >
+        </li>
+
         <li class="nav-item dropdown">
           <a
             class="nav-link dropdown-toggle"
@@ -41,6 +65,7 @@
             role="button"
             data-bs-toggle="dropdown"
             aria-expanded="false"
+            *ngIf="isAuthenticated"
           >
             Manage
           </a>
