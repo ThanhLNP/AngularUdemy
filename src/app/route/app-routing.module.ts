@@ -7,12 +7,14 @@ import { RecipeStartComponent } from '../component/recipes/recipe-start/recipe-s
 import { RecipesComponent } from '../component/recipes/recipes.component';
 import { ShoppingListComponent } from '../component/shopping-list/shopping-list.component';
 import { RecipesResolverService } from '../shared/services/recipes-resolver.service';
+import { AuthGuard } from './auth.guard';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/recipes', pathMatch: 'full' },
   {
     path: 'recipes',
     component: RecipesComponent,
+    canActivate: [AuthGuard],
     children: [
       { path: '', component: RecipeStartComponent },
       { path: 'new', component: RecipeEditComponent },

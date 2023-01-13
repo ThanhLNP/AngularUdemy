@@ -1,7 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { tap } from 'rxjs';
-import { AuthService } from '../../services/auth.service';
 import { RecipeService } from '../../services/recipe.service';
 import { Recipe } from '../model/recipes.model';
 
@@ -11,11 +10,7 @@ export class DataStorageService {
     'https://ng-complete-guide-15ad5-default-rtdb.asia-southeast1.firebasedatabase.app/';
   private recipeUrl = 'recipes.json';
 
-  constructor(
-    private http: HttpClient,
-    private recipeService: RecipeService,
-    private authService: AuthService
-  ) {}
+  constructor(private http: HttpClient, private recipeService: RecipeService) {}
 
   storeRecipes() {
     const recipes = this.recipeService.getRecipes();
